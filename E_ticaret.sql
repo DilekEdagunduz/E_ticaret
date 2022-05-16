@@ -21,6 +21,12 @@ CategoryName Nvarchar(MAX),
 SubCategryId int,
 )
 
+Create table CategoryProduct (
+ID int PRIMARY KEY IDENTITY (1,1),
+CategoryID int,
+ProductId int,
+)
+
 Create table Customer (
 ID int PRIMARY KEY IDENTITY (1,1),
 FirstName Nvarchar(MAX),
@@ -28,6 +34,11 @@ LastName Nvarchar(MAX),
 Adress Nvarchar(MAX),
 CityID int,
 districtID int
+)
+Create table CustomerProduct (
+ID int PRIMARY KEY IDENTITY (1,1),
+CustomerID int,
+ProductId int,
 )
 
 Create table Fovaries (
